@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50. Yıl Ortaokulu | 6-H Power Up Takımı</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .credit-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    font-size: 0.9rem;
+    text-align: left;
+    line-height: 1.4;
+    z-index: 999;
+    border-left: 5px solid var(--ana-yesil);
+    transition: 0.3s;
+}
+
+.credit-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.credit-box strong {
+    color: var(--ana-yesil);
+}
+        /* CSS AYARLARI */
+        :root {
+            --ana-yesil: #27ae60;
+            --koyu-yesil: #1e8449;
+            --enerji-sarisi: #f1c40f;
+            --arka-plan: #ffffff;
+            --yazi-rengi: #2c3e50;
+        }
+
+        html { scroll-behavior: smooth; } /* Sayfa içi kaymayı yumuşatır */
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            color: var(--yazi-rengi);
+            line-height: 1.6;
+        }
+
+        /* Navigasyon */
+        nav {
+            background-color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 90%;
+            top: 20px;
+            left: 5%;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 50px;
+        }
+
+        .logo { font-family: 'Montserrat'; font-size: 1.4rem; color: var(--ana-yesil); }
+
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--yazi-rengi);
+            font-weight: 600;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover { color: var(--ana-yesil); }
+
+        /* Bölüm Ayarları */
+        section {
+            padding: 120px 10% 80px;
+            min-height: 80vh;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Ana Sayfa */
+        #anasayfa {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0;
+        }
+
+        #anasayfa h1 { font-size: 4rem; margin-bottom: 10px; font-family: 'Montserrat'; }
+        #anasayfa p { font-size: 1.5rem; margin-bottom: 30px; }
+
+        .btn {
+            background-color: var(--ana-yesil);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
+        }
+
+        .btn:hover { background-color: var(--enerji-sarisi); transform: scale(1.05); color: #000; }
+
+        /* Kartlar */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { background: #f9f9f9; padding: 40px; border-radius: 20px; transition: 0.3s; border-bottom: 5px solid var(--ana-yesil); }
+        .card:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+        /* Uyku Haftası Özel */
+        .highlight-box {
+            background: #eafaf1;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .time {
+            background: var(--ana-yesil);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 10px;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 50px; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">⚡ POWER UP</div>
+        <ul class="nav-links">
+            <li><a href="#anasayfa">Ana Sayfa</a></li>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
+            <li><a href="#ekibimiz">Ekibimiz</a></li>
+            <li><a href="#haftalar">Program</a></li>
+        </ul>
+    </nav>
+
+    <section id="anasayfa">
+        <h1>6/H Power Up Başlıyor!</h1>
+        <p>50. Yıl Ortaokulu Yeşilay Sağlıklı Yaşam Elçileri</p>
+        <a href="#haftalar" class="btn">Gelişimi Gör <i class="fas fa-arrow-right"></i></a>
+    </section>
+
+    <section id="hakkimizda">
+        <h2 style="font-size: 3rem; color: var(--ana-yesil);">Biz Kimiz?</h2>
+        <p style="font-size: 1.2rem; max-width: 800px;">Bizler Yeşilay ile sadece yarışan değil, sağlıklı yaşamı bir hayat tarzı haline getiren bir ekibiz. Hedefimiz uyku düzenimizi düzelterek fiziksel ve zihinsel olarak <b>Power Up</b> moduna geçmek!</p>
+        
+        <div class="card" style="margin-top: 40px;">
+            <h3>Misyonumuz</h3>
+            <p>Sınıfça el ele vererek zararlı alışkanlıklara "dur" demek ve uykunun gücüyle derslerde %175 daha başarılı bir sınıf haline gelmek.</p>
+        </div>
+    </section>
+
+    <section id="ekibimiz">
+        <h2 style="font-size: 3rem; margin-bottom: 40px;">Power Up Takımı</h2>
+        <div class="grid">
+            <div class="card"><i class="fas fa-brain fa-3x" style="color:var(--ana-yesil)"></i> <h3>Zihin Grubu</h3><p>Odaklanma ve hafıza tekniklerini çalışır.</p></div>
+            <div class="card"><i class="fas fa-bed fa-3x" style="color:var(--ana-yesil)"></i> <h3>Uyku Timi</h3><p>Düzenli uyku takibi yapar.</p></div>
+            <div class="card"><i class="fas fa-apple-alt fa-3x" style="color:var(--ana-yesil)"></i> <h3>Beslenme Grubu</h3><p>Doğru gıdaları seçer.</p></div>
+        </div>
+    </section>
+
+    <section id="haftalar">
+        <h2 style="font-size: 3rem; color: var(--ana-yesil);">4 Haftalık Değişim</h2>
+        
+        <div class="highlight-box">
+            <span style="background: var(--enerji-sarisi); padding: 5px 15px; border-radius: 10px; font-weight: bold;">BU HAFTANIN KONUSU</span>
+            <h3 style="font-size: 2rem; margin-top: 15px;">1. Hafta: Uykunun Süper Gücü</h3>
+            <p>Uyku sadece dinlenmek değil; hücrenin yenilenmesi, boyun uzaması ve beynin "Bakım-Onarım" seansıdır.</p>
+            
+            <div style="margin-top: 30px;">
+                <div class="timeline-item"><span class="time">20:00</span> <p>Yemeği bitir, vücut sindirime başlasın.</p></div>
+                <div class="timeline-item"><span class="time">21:00</span> <p>Mavi ışık (telefon/TV) yasağı! Melatonin başlasın.</p></div>
+                <div class="timeline-item"><span class="time">21:30</span> <p>Kitap oku, zihnini sakinleştir.</p></div>
+                <div class="timeline-item"><span class="time">22:00</span> <p><b>DERİN UYKU:</b> Power Up moduna giriş.</p></div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card" style="opacity: 0.6;"><h3>2. Hafta</h3><p>Yakında yüklenecek...</p></div>
+            <div class="card" style="opacity: 0.6;"><h3>3. Hafta</h3><p>Yakında yüklenecek...</p></div>
+            <div class="card" style="opacity: 0.6;"><h3>4. Hafta</h3><p>Yakında yüklenecek...</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <p><b>50. Yıl Ortaokulu 6/H Sınıfı</b></p>
+        <p>Yeşilay Sağlıklı Yaşam Ligi Projesi 2026</p>
+    </footer>
+
+    <div class="credit-box">
+    <p><strong>Rehber Öğretmen:</strong><br>Ayşegül AKKOYUN</p>
+    <p><strong>Siteyi Yazan:</strong><br>Meryem Ada YAMAN</p>
+</div>
+
+</body>
+</html>
